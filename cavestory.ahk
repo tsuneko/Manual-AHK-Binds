@@ -1,6 +1,7 @@
 #CommentFlag //
 
-#MaxThreadsPerHotkey 2
+#MaxThreadsPerHotkey 1
+#MaxHotkeysPerInterval 10000
 
 #IfWinActive Cave Story+
 
@@ -8,7 +9,7 @@
 
 $c::
   While GetKeyState("c","P"){  
-	Send x
-	Sleep 50
+	Send, {x down}
+	Send, {x up}
   }
 Return
